@@ -1,0 +1,33 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>粉丝身份验证</title>
+    <style>
+        .tit{margin-top:15vh;margin-left:40vw}
+        .xqimg{width:15vh;height:15vh;margin-left:auto}
+        .ft{font-size:2vw;color:#aaaa00;}
+        .ft1{color:#2222ff;size=5px}
+    </style>
+</head>
+<body>
+    <div class="tit">
+        <img src="./file/r/wzxq.png" class="xqimg">
+    </div>
+    <h3 class="ft" align="center">请回答以下问题来确保你是小乔的粉丝</h3>
+    <form method="post" action="./answcheck" class="form" align="center">
+        <p class="ft1">小乔的生日（输入八位年月日，例如2022年6月8日输入20220608）</p>
+        <input type="text" name="birth" placeholder="请输入">
+        <br>
+        <p class="ft1">由于1个球在直播间经常叫小乔一种动物的名称，所以小乔也被称为（四个字，最后一个字为一种动物）</p>
+        <input type="text" name="nm" placeholder="请输入">
+        <br>
+        <p class="ft1">小乔经常玩什么游戏（输入游戏完整名称，四个字）</p>
+        <input type="text" name="game" placeholder="请输入">
+        <br>
+        <p class="ft1"> 小乔的曾用名</p>
+        <input type="text" name="nam" placeholder="请输入（提示：第一个字为陈）" size=30vw>
+        <br>
+        <p class="ft1">*如果实在是有不会的，可以微博私信我获取答案（必须保证你是粉丝）</p><button type="submit">提交答案</button>
+    </form>
+</body>
+</html>

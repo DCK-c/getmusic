@@ -1,0 +1,83 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>小乔的粉丝专区</title>
+    <style>
+        hr{border-color:#00ff00}
+        .videophoto{width:10vw;height:10vw}
+        .vd0{clear:left;float:left;margin-left:1vw}
+        .vd1{clear:right;float:right;overflow:hidden;margin-right:1vw}
+        .vd2{margin:0vw 0vw 0vw 20vw;width:10vw;}
+        .user{float:right}
+        .event{float:left;border:5px solid #ff0000;width:40vw;margin-top:2vh;margin-left:2vw}
+        .tt{color:#bb0000}
+        .fftt{align:center;color:#009900}
+        .ev{color:#ff0077;margin-left:2vw}
+        .dt{color:#0000ff;margin-right:2vw}
+        .ls{color:#cc0000;margin-right:2vw}
+        .videos{border:3px solid #00ff00;width:50vw;margin-top:2vh;margin-right:2vw;float:right}
+        .chatting{border:2px solid #7777ff;clear:left;float:left;margin-left:2vw;margin-top:2vw}
+    </style>
+</head>
+<body>
+    <div class="event" id="event">
+        <h2 align="center" class="tt">乔国重大事件</h2>
+    </div>
+    <div class="videos" id="videos">
+        <h2 align="center" class="tt">粉丝的视频区</h2>
+        <p align="right">更多粉丝的视频请见<a  href="http://apply2.xiaosikaifa.com/htmlShow/index.html#/?secretKey=xiaosi3799182475&projectId=xiaosiproject_si37991824758268998623113&share=" target="_blank">微博@用户7757737421的网站</a></p>
+        <hr>
+    </div>
+    <!--
+    <div class="chatting" id="chatting">
+        <h2 align="center" class="tt">一个发言版</h2>
+        <div class="ct" id="ct"></div>
+    </div>
+    -->
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+    <script src="./file/r/fans.js"></script>
+<script type="text/javascript">
+		for(i in document.images) {
+			document.images[i].ondragstart = function() {
+				return false;
+			};
+		}
+		document.onkeydown = function() {
+			if(window.event && window.event.keyCode == 123) {
+				alert("咱们是有素质的粉丝，不能乱扒网站哦~");
+				window.event.keyCode = 0;
+				window.event.returnValue = false;
+			}
+			if(event.ctrlKey && window.event.keyCode == 85) {
+				window.event.returnValue = false;
+			}
+			if(event.ctrlKey && window.event.keyCode == 83) {
+				window.event.returnValue = false;
+			}
+			if(window.event && window.event.keyCode == 8) {
+				alert(str + "\n请使用Del键进行字符的删除操作！");
+				window.event.returnValue = false;
+			}
+		}
+		document.oncontextmenu = disable;
+		document.oncopy = disable;
+		document.onpaste = disable;
+		document.oncut = disable;
+		document.onselectstart = disable;
+		function disable(event) {
+			if(window.event) {
+				event = window.event;
+			}
+			try {
+				var the = event.srcElement;
+				if(!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+					return false;
+				}
+				return true;
+			} catch(e) {
+				return false;
+			}
+		}
+</script>
+</body>
+</html>
